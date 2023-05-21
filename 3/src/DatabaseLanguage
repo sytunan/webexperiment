@@ -1,0 +1,13 @@
+USE springmvc2;
+CREATE TABLE Course (
+picture varchar(255),
+id int(32) PRIMARY KEY AUTO_INCREMENT,
+name varchar(40),
+hours int,
+schoolId int(32) NOT NULL,
+schoolName varchar(40)
+);
+INSERT INTO Course VALUES ('https://tse4-mm.cn.bing.net/th/id/OIP-C.4YGJmePdtfz7VW6JpWYJJQHaID?w=190&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7',1, 'C语⾔程序设计', 70,1,'计算机学院');
+INSERT INTO Course VALUES ('https://tse4-mm.cn.bing.net/th/id/OIP-C.4YGJmePdtfz7VW6JpWYJJQHaID?w=190&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7',2, 'Python程序设计', 70,1,'计算机学院');
+INSERT INTO Course VALUES ('https://tse4-mm.cn.bing.net/th/id/OIP-C.4YGJmePdtfz7VW6JpWYJJQHaID?w=190&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7',3, '⼤学英语', 96,2,'外国语学院');
+INSERT INTO Course VALUES ('https://tse4-mm.cn.bing.net/th/id/OIP-C.4YGJmePdtfz7VW6JpWYJJQHaID?w=190&h=207&c=7&r=0&o=5&dpr=1.3&pid=1.7',4, '⾼级Web技术', 32,1,'计算机学院')
