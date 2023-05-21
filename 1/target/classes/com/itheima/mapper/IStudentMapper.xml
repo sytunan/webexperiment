@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.mapper.IStudentMapper">
+
+
+
+
+
+    <resultMap id="Maps" type="Course">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="hours" property="hours"></result>
+        <result column="schoolId" property="schoolId"></result>
+
+        <association property="school" >
+            <result column="schoolName" property="schoolName"></result>
+        </association>
+    </resultMap>
+
+    <select id="selectAll" resultMap="Maps">
+        select *
+        from course,school;
+
+    </select>
+
+<select id="selectById" resultMap="Maps">
+    SELECT * FROM course,school where id=2 and course.schoolId=school.schoolId
+</select>
+
+    <select id="selectByschoolName" resultMap="Maps">
+        SELECT id,name,hours,course.schoolId,school.schoolId,schoolName FROM course,school WHERE course.schoolId IN(
+            SELECT school.schoolId WHERE schoolName=#{schoolName});
+    </select>
+
+    <update id="updateById">
+        UPDATE course set name =#{name} ,hours=#{hours},schoolId=#{schoolId}  WHERE id=#{id}
+    </update>
+
+    <insert id="addCourse" >
+        insert into course (name, hours, schoolId) VALUE (#{name},#{hours},#{schoolId})
+    </insert>
+</mapper>
