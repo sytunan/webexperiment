@@ -1,0 +1,16 @@
+org\example\domain\User.class
+org\example\config\SpringMvcSupportConfig.class
+org\example\controller\CourseController.class
+org\example\dao\UserDao.class
+org\example\service\impl\CourseServiceImpl.class
+org\example\controller\UserController.class
+org\example\config\MybatisConfig.class
+org\example\service\impl\UserService.class
+org\example\config\SpringMvcConfig.class
+org\example\config\JdbcConfig.class
+org\example\domain\Course.class
+org\example\config\SpringConfig.class
+org\example\service\CourseService.class
+org\example\service\UserService.class
+org\example\config\ServletConfig.class
+org\example\dao\CourseDao.class
